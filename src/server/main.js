@@ -23,7 +23,7 @@ app.post('/posts', async (req, res) => {
   try {
     const { titulo, url, descripcion } = req.body
     await createPost(titulo, url, descripcion)
-    res.status(201).send('Post creado con exito')
+    res.status(201).send('Post enviado a procesar...')
   } catch (error) {
     res.status(400).send(error)
   }
