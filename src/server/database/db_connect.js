@@ -14,19 +14,6 @@ const config = {
 
 const pool = new Pool(config)
 
-<<<<<<< HEAD
-const db = async (query) => {
-  // select
-  try {
-    const result = await pool.query(query)
-    return result
-  } catch (error) {
-    console.error('[db_connect] => db', error)
-  }
-}
-
-export default pool
-=======
 const db = async (query, values) => {
   try {
     const result = await pool.query(query, values)
@@ -39,4 +26,3 @@ const db = async (query, values) => {
 }
 
 export default db
->>>>>>> feature/test
